@@ -52,6 +52,7 @@ class Plateau:
         """
         (y_beg, x_beg) = action[0]
         (y_end, x_end, act) = action[1]
+        self.cases = copy.deepcopy(self.cases)
         self.cases[y_end][x_end] = self.cases[y_beg][x_beg]
         self.cases[y_beg][x_beg] = pc.Piece(pc.vide, pc.vide)
     
